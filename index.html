@@ -4,7 +4,264 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Page: Your name here</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Internal styles here(to move to external later) -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+
+      /* reset css to default settings */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        /* outline: 1px dashed gray; */
+      }
+      /* set up the page backgrround and styles */
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #e0ffff;
+      }
+
+      /* Start of styling header and nav */
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 70px 70px;
+        width: 80%;
+        margin: auto;
+      }
+
+      nav ul {
+        display: flex;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin-inline: 30px;
+      }
+
+      nav ul li a {
+        color: #008080;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        color: #fdbd31;
+        transition: 0.3s;
+      }
+      /* End of styling header and nav */
+
+      /* Start of styling for the Main section */
+      #mainsection {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 20px;
+        margin: auto;
+        width: 80%;
+        height: 100dvh;
+      }
+
+    .left-div{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+    }
+
+    .right-div{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: normal;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .profilecontainer {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+
+    }
+
+    .rounded-image{
+        width:100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0px 5px;
+        border: 5px solid white;
+    }
+
+    .profilecontainer p span{
+        display: block;
+
+    }
+
+    .profiledetails ul li{
+        list-style:none;
+        font-size: small;
+        padding-left: 20px;
+        line-height: 25px;
+
+    }
+
+    .profiledetails .subheader{
+    
+        display: block;
+        padding: 5px 0;
+        font-size: medium;
+        border-bottom: 1px dashed lightblue;
+        border-top: 1px dashed lightblue;
+    }
+
+
+    .linkcontainer{
+        display:flex;
+        margin-top: 10px;
+    }
+
+    .linkcontainer a{
+        padding: 10px 20px;
+        font-size: 16px;
+        background: #008080;
+        color: #ffffff;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .linkcontainer a:hover{
+        background-color: pink;
+    }
+    /* End of styling of Main */
+
+        /* Start of styling projectsection */
+    /* ******************************* */
+
+    /* Set projectsection's style*/
+    #projectsection {
+        width: 80%;
+        margin: auto;
+        height: 100dvh;
+    }
+
+    /* Set the showcasecontainer to list the projects, repeated in equal columns of 3s per fractional unit */
+    .showcasecontainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+    }
+
+    /* Set the card background to white */
+    .projectcard {
+        font-size: small;
+        background-color: white;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-bottom: 24px;
+    }
+
+    /* Set the project card p tag with a left padding of 24px */
+    .projectcard h4, .projectcard p {
+        padding-left: 16px;
+    }
+
+    /* Set the image in the project card */
+    .projectcard img {
+        display: block;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 180px;
+        background-size: cover;
+        background-position-x: center; 
+        background-position-y: center;
+        background-repeat: no-repeat;  
+        background-image: url("img/imgplaceholder.png");
+        text-indent: -9999px; /* remove or comment out text indent if all images are available */
+    }
+
+    /* Set the projectcard's title style (se the text to upper case) */
+    .projectcard .scope {
+        text-transform: uppercase;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    /* Set mouseover effect for project card */
+    .projectcard:hover {
+        transition: 0.45s ease-out;
+        transform: scale(1.05);
+    }
+
+    /* Set the link colour for the project card */
+    .projectcard a {
+        text-decoration: none;
+        color: gray;
+        transform: scale(1.0);
+    }
+
+    /* Set some tag layout for the <span> tag */
+    .projectcard span {
+        display: inline-block;
+        font-size: x-small;
+        align-content: space-between;
+        border-radius: 6px;
+        margin: 4px;
+        background-color: lightseagreen;
+        padding: 5px 10px;
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    /* ***************************** */
+    /* End of styling projectsection */
+    /* Styling the project section and showcasecontainter */
+
+      #projectsection{
+        width: 80%;
+        margin: 0 auto;
+        height: 100dvh;
+      }
+
+      .sectiontitle, .logo {
+        font-size: 45px;
+        font-weight: 700;
+        color: lightseagreen;
+      }
+
+      .showcasecontainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 24px;
+      }
+    
+      .top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .top a{
+        margin-top: 20px;
+        text-decoration: none;
+        color: lightseagreen;
+        font-size: small;
+      }
+    /* End of styling of project and showcasecontainer*/
+
+    </style>
   </head>
   <body>
     <!-- Set up your page structure here -->
